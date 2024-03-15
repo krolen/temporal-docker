@@ -53,6 +53,9 @@ services:
       - /var/lib/postgresql/data
     networks:
       - temporal-network
+    ports:
+      - 5432:5432
+
 
   temporal-history:
     <<: *loki-logging
